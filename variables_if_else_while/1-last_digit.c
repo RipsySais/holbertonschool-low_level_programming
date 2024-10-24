@@ -5,7 +5,7 @@
 /**
  * main - stock le dernier chiffre ds la variable N
  *
- * Return: 0 (sucess)
+ * Return: 0 
  */
 
 int main(void)
@@ -27,3 +27,4 @@ int main(void)
 		printf("and is less than 6 and not 0\n");
 
 	return (0);
+}
