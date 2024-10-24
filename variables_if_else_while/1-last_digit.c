@@ -5,7 +5,7 @@
 /**
  * main - stock le dernier chiffre ds la variable N
  *
- * Return: 0 
+ * Return: 0 (sucess)
  */
 
 int main(void)
