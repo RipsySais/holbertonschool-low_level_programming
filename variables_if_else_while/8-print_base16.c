@@ -11,12 +11,15 @@ int main(void)
 	int num;
 	int seize;
 
+	
+	for (num = 0; num < 16; num++)
 	{
-		for (num = 0; num < 16; num++)
-			putchar((num % 10) + '0');
+		putchar((num % 10) + '0');
+	}
 
-		for (seize = 'a'; seize <= 'f'; seize++)
-			putchar(seize);
+	for (seize = 'a'; seize <= 'f'; seize++)
+	{
+		putchar(seize);
 	}
 
 	putchar('\n');
