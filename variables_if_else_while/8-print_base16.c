@@ -9,13 +9,14 @@
 int main(void)
 {
 	int num;
+	int seize;
 
-	for (num = 0; num < 16; num++)
 	{
-		if (num + '0')
-			putchar(num + '0');
-		else
-			putchar(num - 10 + 'a');
+		for (num = 0; num < 16; num++)
+			putchar((num % 10) + '0');
+
+		for (seize = 'a'; seize < 'f'; seize++)
+			putchar(seize);
 	}
 
 	putchar('\n');
