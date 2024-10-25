@@ -15,7 +15,7 @@ int main(void)
 		for (num = 0; num < 16; num++)
 			putchar((num % 10) + '0');
 
-		for (seize = 'a'; seize < 'f'; seize++)
+		for (seize = 'a'; seize <= 'f'; seize++)
 			putchar(seize);
 	}
 
