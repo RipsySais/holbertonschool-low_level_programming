@@ -25,9 +25,9 @@ char *leet(char *str)
 
 	while (*ptr != '\0')
 	{
-		if (leet_map[ptr] != 0)
+		if (leet_map[(unsigned char)*ptr] != 0)
 		{
-			*ptr = leet_map[ptr];
+			*ptr = leet_map[(unsigned char)*ptr];
 		}
 		ptr++;
 	}
