@@ -16,7 +16,7 @@ int helper(int n, int i)
 	}
 	if (i * i > n)
 	{
-		return (0);
+		return (1);
 	}
 	if (n % i == 0)
 	{
