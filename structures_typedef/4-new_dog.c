@@ -1,7 +1,43 @@
 #include "dog.h"
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
+/**
+ * _strlen - renvoie la longeur d'une chaine
+ * @s: ponteur vers la chaine
+ * Return: length
+ */
+
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (s[length] != '\0')
+		length++;
+
+	return (length);
+}
+
+/**
+ * *_strcpy - renvoie la longueur d'une chaîne
+ * @dest: copier la chaine
+ * @src: chaine à copier
+ * Return: dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
 
 /**
  * new_dog - Crée un nouveau chien
