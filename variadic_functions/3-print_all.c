@@ -1,50 +1,86 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
 #include <stdio.h>
 
 /**
- * print_all - une fonction qui imprime n'importe quoi.
- * @format: listes des types d'arguments passés à kla fonction
+ * print_char - imprimer un caractère
+ * @ap: l'argument de la variable
+ */
+
+void print_char(va_list ap)
+{
+	printf("%c", va_arg(ap, int));
+}
+
+/**
+ * print_float - imprimer un nombre flottant
+ * @ap: l'argument de la variable
+ */
+
+void print_float(va_list ap)
+{
+	printf("%f", va_arg(ap, double));
+}
+
+/**
+ * print_int - imprimer un nombre entier
+ * @ap: l'argument de la variable
+ */
+
+void print_int(va_list ap)
+{
+	printf("%d", va_arg(ap, int));
+}
+
+/**
+ * print_string - imprimer une chaine de caractère
+ * @ap: l'argument de la variable
+ */
+
+void print_string(va_list ap)
+{
+	char *s = va_arg(ap, char*);
+
+	if (!s)
+		s = "(nil)";
+	printf("%s", s);
+}
+
+/**
+ * print_all - imprime n'importe quoi en fonction des types spécifiés
+ * @format: listes des types d'arguments passés à la fonction
  */
 
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	unsigned int i = 0;
-	char *str;
-	const char *separator = "";
+	format_specifier_t; specifiers[] = {
+		{'c', print_char},
+		{'f', print_float},
+		{'i', print_int},
+		{'s', print_string},
+		{'\0', NULL},
+	};
 
-	va_start(args, format);
+	va_list ap;
+	int index = 0, j;
+	char *separator = "";
 
-	while (format && format[i])
+	va_start(ap, format);
+	while (format && format[index])
 	{
-
-		switch (format[i])
+		j = 0;
+		while (specifiers[j].specifier)
 		{
-			case 'c':
-				printf("%s%c", separator, va_arg(args, int));
+			if (format[index] == specifiers[j].specifier)
+			{
+				printf("%s", separator);
+				specifiers[j].print_func(ap);
+				separator = ", ";
 				break;
-			case 'i':
-				printf("%s%d", separator, va_arg(args, int));
-				break;
-			case 'f':
-				printf("%s%f", separator, va_arg(args, double));
-				break;
-			case 's':
-				str = va_arg(args, char *);
-				if (!str)
-				{
-					str = "(nil)";
-				}
-					printf("%s%s", separator, str);
-					break;
-			default:
-					i++;
-				continue;
+			}
+			j++;
 		}
-		separator = ",";
-		i++;
+		index++;
 	}
-	va_end(args);
+	va_end(ap);
 	printf("\n");
 }
