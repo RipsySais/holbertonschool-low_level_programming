@@ -52,7 +52,7 @@ void print_string(va_list ap)
 
 void print_all(const char * const format, ...)
 {
-	format_specifier_t; specifiers[] = {
+	format_specifier_t specifiers[] = {
 		{'c', print_char},
 		{'f', print_float},
 		{'i', print_int},

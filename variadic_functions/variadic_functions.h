@@ -3,9 +3,11 @@
 
 #include <stdarg.h>
 
+typedef struct format_specifier
+
 {
 	char specifier;
-	void (*print_func)(va list ap);
+	void (*print_func)(va_list);
 } format_specifier_t;
 
 int sum_them_all(const unsigned int n, ...);
