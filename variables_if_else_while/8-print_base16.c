@@ -8,21 +8,13 @@
 
 int main(void)
 {
-	int num;
-	int seize;
+	 char ch;
 
-	
-	for (num = 0; num < 16; num++)
-	{
-		putchar((num % 10) + '0');
-	}
+    for (ch = '0'; ch <= '9'; ch++)
+        putchar(ch);
+    for (ch = 'a'; ch <= 'f'; ch++)
+        putchar(ch);
+    putchar('\n');
 
-	for (seize = 'a'; seize <= 'f'; seize++)
-	{
-		putchar(seize);
-	}
-
-	putchar('\n');
-
-	return (0);
+    return (0);
 }
