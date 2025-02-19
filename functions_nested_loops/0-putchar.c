@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - Imprime _putchar suivi d'une nouvelle ligne
