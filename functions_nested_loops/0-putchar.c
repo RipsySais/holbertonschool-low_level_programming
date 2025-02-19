@@ -5,8 +5,9 @@
  * main - Imprime _putchar suivi d'une nouvelle ligne
  *
  * Description: Utilise putchar pour afficher le texte
- * Retourne: 0 (Succès)
+ * Retourne: 0 (Succès
  */
+
 int main(void)
 {
     putchar('_');
