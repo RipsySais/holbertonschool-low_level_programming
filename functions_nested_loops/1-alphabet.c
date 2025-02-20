@@ -3,6 +3,7 @@
 
 /**
  * print_alphabet - imprime l'alphabet en minuscules suivi d'une nouvelle ligne
+ * Return: (void)
  */
 
 void print_alphabet(void)
@@ -11,7 +12,7 @@ void print_alphabet(void)
 
 	for (y = 'a'; y <= 'z'; y++)
 	{
-		putchar(y);
+		_putchar(y);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
