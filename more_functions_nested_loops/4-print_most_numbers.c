@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 /**
- * print_most_number - fonction qui imprime les nombres, de 0 à 9,
+ * print_most_numbers - fonction qui imprime les nombres, de 0 à 9,
  * suivis d'une nouvelle ligne.
  */
+
 void print_most_numbers(void)
 {
 	int num;
