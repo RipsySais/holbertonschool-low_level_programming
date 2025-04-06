@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * close_file - fermer fichier
- * @fd: fichier ouvert
+ * close_file - ferme fichier et gère les erreur si échec
+ * @fd: description de fichier à fermer
  */
 
 void close_file(int fd)
