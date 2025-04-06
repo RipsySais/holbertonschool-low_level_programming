@@ -14,7 +14,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: %s filename text\n", av[]);
+		dprintf(2, "Usage: %s filename text\n", av[0]);
 		return (1);
 	}
 
